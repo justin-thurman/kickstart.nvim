@@ -70,6 +70,10 @@ require('lazy').setup({
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
 
+  -- Harpoon
+  'nvim-lua/plenary.nvim',
+  'ThePrimeagen/harpoon',
+
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
