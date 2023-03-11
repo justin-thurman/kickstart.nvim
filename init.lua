@@ -77,6 +77,12 @@ require('lazy').setup({
   'nvim-lua/plenary.nvim',
   'ThePrimeagen/harpoon',
 
+  -- Leap
+  'ggandor/leap.nvim',
+
+  -- fzf-lua
+  'ibhagwan/fzf-lua',
+
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
@@ -285,13 +291,19 @@ vim.keymap.set('n', ',s', function()
   })
 end, { desc = '[/] Fuzzily search in current buffer' })
 
-vim.keymap.set('n', ',f', require('telescope.builtin').find_files, { desc = '[S]earch [F]iles' })
+-- vim.keymap.set('n', ',f', require('telescope.builtin').find_files, { desc = '[S]earch [F]iles' })
 vim.keymap.set('n', ',h', require('telescope.builtin').help_tags, { desc = '[S]earch [H]elp' })
 vim.keymap.set('n', ',w', require('telescope.builtin').grep_string, { desc = '[S]earch current [W]ord' })
-vim.keymap.set('n', ',<S-s>', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
+-- vim.keymap.set('n', ',<S-s>', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 vim.keymap.set('n', ',g', require('telescope.builtin').git_files, { desc = 'Search Git Files' })
 vim.keymap.set('n', ',t', require('telescope.builtin').treesitter, { desc = 'Search symbols' })
+
+-- FzfLua
+vim.keymap.set('n', ',f', require('fzf-lua').git_files, { desc = '[S]earch [F]iles' })
+vim.keymap.set('n', ',<S-s>', require('fzf-lua').live_grep_native, { desc = '[S]earch by [G]rep' })
+
+
 
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
