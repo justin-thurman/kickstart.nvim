@@ -83,6 +83,9 @@ require('lazy').setup({
   -- fzf-lua
   'ibhagwan/fzf-lua',
 
+  -- autopair
+  'windwp/nvim-autopairs',
+
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
